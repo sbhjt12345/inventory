@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="lib/jquery.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/get-shit-done.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+ <style type="text/css">
+  body { 
+background-image: url("img/dessert.jpg"); 
+background-color:transparent;
+background-repeat: y-repeat;
+background-attachement:scroll;
+background-size:100%;
+} 
+
+nav{
+background-image: url("img/dessert.jpg"); 
+background-size:200%;
+
+}
+
+#thetitle{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 200%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 150%;
+  } 
+}
+
+#panelanime{
+  animation-duration: 2s;
+  animation-name: slidein2;
+  filter: blur(5px);
+}
+@keyframes slidein2 {
+  from {
+    margin-top: 20%;
+  }
+
+  to {
+    margin-top: 0%;
+  } 
+}
+
+
+
+ </style>
+<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+	function dosomesubmit() {
+		var uid = $("#userid").val() || '';
+		$('input[name="q1"]').val(uid);
+
+		var upsd = $('#userpassword').val() || '';
+		$('input[name="q2"]').val(upsd);
+		console.log(upsd);
+		var userArray = alasql('select * from pass');
+　　　　　　　var count = 0;
+		for (var i = 0; i < userArray.length; i++) {
+
+			var userA = userArray[i];
+			console.log(userA.userid);
+			console.log(userA.password);
+			console.log(userA.name);
+			if (userA.userid == uid && userA.password == upsd) {
+				localStorage.setItem("name",userA.name);
+				window.open("menu.html",'_self',false);
+			}
+			else count++;
+		}
+		
+		if (count==userArray.length){
+			var pp = document.getElementById("miss");
+			pp.innerHTML = '<div class="alert alert-danger" role="alert">ユーザーIDもしくはパスワードが間違えています。</div>';
+		}
+		
+	}
+</script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/alasql.min.js"></script>
+<script src="lib/purl.js"></script>
+<script src="js/db.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="viewport" content="width=device-width">
+<meta charset="UTF-8">
+<title>Homepage</title>
+</head>
+<body>
+	<header id="header" style="margin-bottom: 20px; outline-style: double;color:red" >
+		<div>
+			<nav class="navbar navbar-default">
+				<div class=container>
+					<div class="navbar-header" >
+						<h1 id="thetitle">ビンゴカメラ在庫管理システム</h1>
+						<div>
+							<a onclick="DB.init();"><span
+								class="glyphicon glyphicon-repeat"></span> DB初期化</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="col-xs-12 col-md-6 col-md-offset-3" id="panelanime">
+		<div class="panel panel-success">
+			<div class="panel-heading">ユーザーログイン</div>
+			<div class="panel-body">
+				<div class="form-group">ユーザーIDでログインしてください</div>
+				<div class="form-group">
+					<input type="text" id="userid" name="q1" class="form-control"
+						placeholder="ユーザーID" 　required autofocus>
+				</div>
+				<div class="form-group">
+					<input type="password" id="userpassword" name="q2"
+						class="form-control" placeholder="パスワード" 　required> <a
+						href="mailforforget.html"
+						style="font-size: small; margin-top: 5px;">パスワードを忘れた方はこちら</a>
+						<br>
+						<div id="miss"></div>
+				</div>
+				<button onclick="dosomesubmit()" class="btn btn-success btn-block">
+					ログイン<i class="fa fa-sign-in"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

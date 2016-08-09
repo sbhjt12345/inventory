@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/get-shit-done.css" rel="stylesheet" />
+<script src="lib/alasql.min.js"></script>
+<script src="lib/purl.js"></script>
+<script src="js/db.js"></script>
+<link href="css/covermode.css" rel="stylesheet" />
+<link href="css/jquery.multilevelpushmenu.css" rel="stylesheet" />
+<link href="css/font-awesome.css" rel="stylesheet" />
+<link href="css/chartist.css" rel="stylesheet" />
+<title>Insert title here</title>
+</head>
+
+
+<body>
+ <div id="navbar-full">
+    <div id="navbar">
+    <div class="navigation-example">
+         <nav class="navbar navbar-default" role="navigation-demo">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">倉庫収支一覧</a>
+            </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navigation-example-2">
+              <ul class="nav navbar-nav">
+                 <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">年分<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                       <li role="presentation"><a href="#" onclick="showallus(this)" id="2014">2014</a></li>
+			           <li role="presentation"><a href="#" onclick="showallus(this)" id="2015">2015</a></li>
+			           <li role="presentation"><a href="#" onclick="showallus(this)" id="2016">2016</a></li>
+                      </ul>
+                </li>
+                <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#" onclick="showallus(this)" id="world">各倉庫総収支</a></li>
+                        <li><a href="#" onclick="showallus(this)" id="japan">各倉庫収支（月別）</a></li>
+                        <li><a href="#" onclick="showallus(this)" id="tokyo">各倉庫収支構成図</a></li>
+                      </ul></li></ul></div></div></nav></div></div></div>
+
+	<div id="show"></div>
+	<div class="ct-chart" id="showallus"></div>
+	<div  id="showmonthus"></div>
+	<div id="show2"></div>
+	<div class="ct-chart1" id="showwhat"></div>
+	<div  id="showmoneyus"></div>
+	<script src="js/jquery.multilevelpushmenu.js"></script>
+	<script type="text/javascript" src="js/covermode.js"></script>
+	<script type="text/javascript" src="js/chartist.js"></script>
+	<script type="text/javascript" src="js/shownoenough.js"></script>
+</body>
+</html>

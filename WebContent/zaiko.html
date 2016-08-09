@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="lib/jquery.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/get-shit-done.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/alasql.min.js"></script>
+<script src="lib/purl.js"></script>
+<script src="js/db.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="viewport" content="width=device-width">
+<title>COMPANY</title>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">COMPANY</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="zaiko.html">在庫管理</a></li>
+				</ul>
+<!-- 				<ul class="nav navbar-nav navbar-right"><li id="showthename"></li></ul> -->
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>
+							システム <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a onclick="window.location.reload(true);"><span
+									class="glyphicon glyphicon-refresh"></span> リロード</a></li>
+							<li><a onclick="DB.init();"><span
+									class="glyphicon glyphicon-repeat"></span> DB初期化</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a onclick="DB.remove();"><span
+									class="glyphicon glyphicon-trash"></span> DB削除</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+		<form action="zaiko.html" class="form-inline text-center">
+			<div class="form-group">
+				<label>倉庫</label> <select name="q1" class="form-control">
+					<option value="0">すべて</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>分類</label> <select name="q2" class="form-control">
+					<option value="0">すべて</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>コード</label> <input name="q3" type="text" class="form-control"
+					placeholder="前方一致">
+			</div>
+			<button type="submit" class="btn btn-primary">
+				<span class="glyphicon glyphicon-search"></span> 検索
+			</button>
+		</form>
+		<hr>
+
+		<div class="clearfix" style="margin: 10px 0;">
+			<a href="stock-form.html" class="btn btn-sm btn-success pull-right"><span
+				class="glyphicon glyphicon-plus"></span> 新規</a>
+		</div>
+		<!--  above this is the original code		 -->
+
+
+
+
+
+
+
+
+		<ul class="nav nav-tabs" id="navhahaha">
+			<li role="presentation"><a onclick="change(this)">総体在庫一覧</a></li>
+			<li role="presentation" class="dropdown"><a
+				class="dropdown-toggle" data-toggle="dropdown" href="#"
+				role="button" aria-expanded="false"> 類別で商品在庫参照 <span class="caret"></span>
+			</a>
+				<ul class="dropdown-menu" role="menu">
+					<li role="presentation"><a onclick="change(this)">倉庫別</a></li>
+					<li role="presentation" ><a onclick="change(this)">詳細別</a></li>
+					<li role="presentation"><a onclick="change(this)">メーカー別</a></li>
+					<li role="presentation"><a onclick="change(this)">コード別</a></li>
+				</ul></li>
+		</ul>
+
+<!-- 		<tab panes> -->
+        <div class="tab-content">
+        <div class="tab-pane active" id="thewholeone">
+        <table id="thebiggestone" class="table table-hover table-condensed table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>倉庫</th>
+					<th>分類</th>
+					<th>コード</th>
+					<th>メーカー</th>
+					<th>詳細</th>
+					<th>金額</th>
+					<th>残量</th>
+					<th>単位</th>
+				</tr>
+			</thead>
+			<tbody id="tbody-stocks"></tbody>
+		</table> 
+        </div>
+        <div class="tab-pane" id="thewareone">
+        </div>
+        <div class="tab-pane" id="thecodeone">
+        </div>
+        <div class="tab-pane" id="themakerone">
+        </div>
+        <div class="tab-pane" id="thekindone">
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+		<!--  from this is the original code. -->
+		
+	</div>
+	
+	
+	
+	
+<!-- 	<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">check -->
+<!-- 		items in detail</a> -->
+<!-- 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" -->
+<!-- 		aria-labelledby="myModalLabel" aria-hidden="true"> -->
+<!-- 		<div class="modal-dialog"> -->
+<!-- 			<div class="modal-content"> -->
+<!-- 				<div class="modal-header"> -->
+<!-- 					<button type="button" class="close" data-dismiss="modal" -->
+<!-- 						aria-hidden="true">&times;</button> -->
+<!-- 					<h4 class="modal-title">商品＆情報</h4> -->
+<!-- 				</div> -->
+<!-- 				<div class="modal-body"> -->
+<!-- 					<div id="carousel-example-generic" class="carousel slide"> -->
+<!-- 						<ol class="carousel-indicators" id="numofshit"> -->
+<!-- 						</ol> -->
+<!-- 						<div class="carousel-inner" id="numofshit2"></div> -->
+<!-- 					</div> -->
+<!-- 					<a class="left carousel-control" href="#carousel-example-generic" -->
+<!-- 						data-slide="prev"> <span class="icon-prev"></span> -->
+<!-- 					</a> <a class="right carousel-control" href="#carousel-example-generic" -->
+<!-- 						data-slide="next"> <span class="icon-next"></span> -->
+<!-- 					</a> -->
+<!-- 				</div> -->
+
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+
+
+
+	<script src="js/zaiko.js"></script>
+	<script src="js/mainindex.js"></script>
+</body>
+</html>

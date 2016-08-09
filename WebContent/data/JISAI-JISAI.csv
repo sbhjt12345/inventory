@@ -1,0 +1,85 @@
+id,stock,date,qty,memo,year,month,day
+1,9,2016-08-02,15,got from hagendas,2016,8,2
+2,35,2016-08-02,30,got from finland shop,2016,8,2
+3,28,2016-08-02,10,test for check plus 10,2016,8,2
+4,4,2016-08-02,-40,test for check minus 40,2016,8,2
+5,40,2016-08-02,-13,test for check minus 13,2016,8,2
+6,40,2016-08-02,-2,become 1,2016,8,2
+7,4,2016-08-02,-5,test for check2,2016,8,2
+8,9,2016-08-03,15,got from hagendas,2016,8,3
+9,35,2016-08-03,30,got from finland shop,2016,8,3
+10,28,2016-08-03,10,test for check plus 10,2016,8,3
+11,4,2016-08-03,-40,test for check minus 40,2016,8,3
+12,40,2016-08-03,-13,test for check minus 13,2016,8,3
+13,40,2016-08-03,-2,become 1,2016,8,3
+14,4,2016-08-03,-5,test for check2,2016,8,3
+15,9,2016-08-04,15,got from hagendas,2016,8,4
+16,35,2016-08-04,30,got from finland shop,2016,8,4
+17,28,2016-08-04,10,test for check plus 10,2016,8,4
+18,4,2016-08-04,-40,test for check minus 40,2016,8,4
+19,40,2016-08-04,-13,test for check minus 13,2016,8,4
+20,40,2016-08-04,-2,become 1,2016,8,4
+21,4,2016-08-04,-5,test for check2,2016,8,4
+22,9,2016-08-05,15,got from hagendas,2016,8,5
+23,35,2016-08-05,30,got from finland shop,2016,8,5
+24,28,2016-08-05,10,test for check plus 10,2016,8,5
+25,4,2016-08-05,-40,test for check minus 40,2016,8,5
+26,40,2016-08-05,-13,test for check minus 13,2016,8,5
+27,40,2016-08-05,-2,become 1,2016,8,5
+28,4,2016-08-05,-5,test for check2,2016,8,5
+29,9,2016-08-05,15,got from hagendas,2016,8,5
+30,35,2016-08-05,30,got from finland shop,2016,8,5
+31,28,2016-08-05,10,test for check plus 10,2016,8,5
+32,4,2016-08-05,-40,test for check minus 40,2016,8,5
+33,40,2016-08-05,-13,test for check minus 13,2016,8,5
+34,40,2016-08-05,-2,become 1,2016,8,5
+35,4,2016-08-05,-5,test for check2,2016,8,5
+36,9,2016-08-06,15,got from hagendas,2016,8,6
+37,35,2016-08-06,30,got from finland shop,2016,8,6
+38,28,2016-08-06,10,test for check plus 10,2016,8,6
+39,4,2016-08-06,-40,test for check minus 40,2016,8,6
+40,40,2016-08-06,-13,test for check minus 13,2016,8,6
+41,40,2016-08-06,-2,become 1,2016,8,6
+42,4,2016-08-06,-5,test for check2,2016,8,6
+43,9,2016-08-07,15,got from hagendas,2016,8,7
+44,35,2016-08-07,30,got from finland shop,2016,8,7
+45,28,2016-08-07,10,test for check plus 10,2016,8,7
+46,4,2016-08-07,-40,test for check minus 40,2016,8,7
+47,40,2016-08-07,-13,test for check minus 13,2016,8,7
+48,40,2016-08-07,-2,become 1,2016,8,7
+49,4,2016-08-07,-5,test for check2,2016,8,7
+50,9,2016-08-08,15,got from hagendas,2016,8,8
+51,35,2016-08-08,30,got from finland shop,2016,8,8
+52,28,2016-08-08,10,test for check plus 10,2016,8,8
+53,4,2016-08-08,-40,test for check minus 40,2016,8,8
+54,40,2016-08-08,-13,test for check minus 13,2016,8,8
+55,40,2016-08-08,-2,become 1,2016,8,8
+56,4,2016-08-08,-5,test for check2,2016,8,8
+57,9,2016-08-09,15,got from hagendas,2016,8,9
+58,35,2016-08-09,30,got from finland shop,2016,8,9
+59,28,2016-08-09,10,test for check plus 10,2016,8,9
+60,4,2016-08-09,-40,test for check minus 40,2016,8,9
+61,40,2016-08-09,-13,test for check minus 13,2016,8,9
+62,40,2016-08-09,-2,become 1,2016,8,9
+63,4,2016-08-09,-5,test for check2,2016,8,9
+64,9,2016-08-10,15,got from hagendas,2016,8,10
+65,35,2016-08-10,30,got from finland shop,2016,8,10
+66,28,2016-08-10,10,test for check plus 10,2016,8,10
+67,4,2016-08-10,-40,test for check minus 40,2016,8,10
+68,40,2016-08-10,-13,test for check minus 13,2016,8,10
+69,40,2016-08-10,-2,become 1,2016,8,10
+70,4,2016-08-10,-5,test for check2,2016,8,10
+71,9,2016-08-11,15,got from hagendas,2016,8,11
+72,35,2016-08-11,30,got from finland shop,2016,8,11
+73,28,2016-08-11,10,test for check plus 10,2016,8,11
+74,4,2016-08-11,-40,test for check minus 40,2016,8,11
+75,40,2016-08-11,-13,test for check minus 13,2016,8,11
+76,40,2016-08-11,-2,become 1,2016,8,11
+77,4,2016-08-11,-5,test for check2,2016,8,11
+78,9,2016-08-12,15,got from hagendas,2016,8,12
+79,35,2016-08-12,30,got from finland shop,2016,8,12
+80,28,2016-08-12,10,test for check plus 10,2016,8,12
+81,4,2016-08-12,-40,test for check minus 40,2016,8,12
+82,40,2016-08-12,-13,test for check minus 13,2016,8,12
+83,40,2016-08-12,-2,become 1,2016,8,12
+84,4,2016-08-12,-5,test for check2,2016,8,12

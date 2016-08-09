@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/get-shit-done.css" rel="stylesheet" />
+<script src="lib/alasql.min.js"></script>
+<script src="lib/purl.js"></script>
+<script src="js/db.js"></script>
+<link href="css/covermode.css" rel="stylesheet" />
+<link href="css/jquery.multilevelpushmenu.css" rel="stylesheet" />
+<link href="css/font-awesome.css" rel="stylesheet" />
+<link href="css/chartist.css" rel="stylesheet" />
+<script type="text/javascript" src="js/chartist.js"></script>
+<!-- <link href="css/fresh-bootstrap-table.css" rel="stylesheet" /> -->
+<title>MENU</title>
+</head>
+<body>
+	<div id="pushobj1">
+	    <h2>ビックカメラ在庫管理システムへようこそ</h2><br>
+
+	    <div class="media">
+	<a class="media-left" href="#">
+		<img src="img/18.jpg" alt="Rounded Image" class="photo img-rounded"  style="size: portrait;"></img>
+	</a>
+	<div class="media-body">
+		<h4 class="media-heading"><strong>登録ユーザ：織田信長</strong></h4>
+		<p style="font-family: fantasy;">部門：物流部</p>
+		<p style="font-family: fantasy;">嫌いな場所：本能寺</p>
+		<p style="font-family: fantasy;">好きな言葉：天下布武</p>
+	</div>
+</div>
+	</div>
+	<div id="pushobjx"></div>
+	<div id="pushobjxx"></div>
+	<div id="pushobj2"></div>
+	<div id="pushobj3"></div>
+	<div id="menu">
+		<nav>
+			<h2>
+				<i class="fa fa-reorder"></i>All Categories
+
+			</h2>
+			<ul>
+			    <li><a href="#" onclick="sweethome()">ホーム</a>
+				<li><a href="#">入庫管理</a>
+					<h2><i class="fa fa-reorder"></i>入庫管理</h2>
+					<ul>
+						<li><a href="#">入庫記入</a>
+						    <h2><i class="fa fa-reorder"></i>入庫記入</h2>
+						    <ul>
+						        <li><a href="#" onclick="jidoukinyuu()" id="havefun">自動記入</a></li>
+						        <li><a href="#" onclick="tekinyuu()">緊急記入（手記入のみ）</a></li>
+						    </ul>
+						</li>
+						<li><a href="#" onclick="kinyuucheck()" id="havecheck">本日入庫チェック</a></li>
+						<li><a href="#" onclick="gosa(this)" id="ngosa">今年の入庫数誤差グラフ</a></li>
+						<li><a href="#" onclick="sweethome()">ホーム</a>
+					</ul>
+				</li>
+				<li><a href="#">出庫管理</a>
+					<h2><i class="fa fa-reorder"></i>出庫管理</h2>
+					<ul>
+						<li><a href="#">出庫記入</a>
+						    <h2><i class="fa fa-reorder"></i>出庫記入</h2>
+						    <ul>
+						        <li><a href="#" onclick="jidoukn()" id="havefun2">自動記入</a></li>
+						        <li><a href="#" onclick = "dasabi()">緊急記入（手記入のみ）</a></li>
+						    </ul>
+						</li>
+						<li><a href="#" onclick="syukkocheck()" id="havecheck2">本日出庫チェック</a></li>
+						<li><a href="#" onclick="gosa(this)" id="sgosa">今年の出庫数誤差グラフ</a></li>
+						<li><a href="#" onclick="sweethome()">ホーム</a>
+					</ul>
+				</li>
+				<li><a href="#" onclick="sansyou()">商品入出庫履歴参照</a></li>
+				<li><a href="#" onclick="showusgraph()">売り上げ＆支出</a>				
+				</li>
+				
+<!-- 				收入与支出:选择日期后,将会出现总体,各仓库,图表比较. -->
+				<li><a href="#" id="tanaorosi" onclick="tnorosi()"></a></li>
+				<li><a href="#">在庫調整</a>
+				    <h2><i class="fa fa-reorder"></i>在庫調整</h2>
+				    <ul>
+				       <li><a href="#" onclick="moneychange()">金額調整</a></li>
+				       <li><a href="#" onclick="numchange()">在庫数調整</a></li>
+				       <li><a href="#" onclick="soukochange()">倉庫調整</a></li> 
+				       <li><a href="#" onclick="sweethome()">ホーム</a>
+				    </ul>
+				</li>
+				<li><a href="#" onclick="showthefuture()">未来在庫不足商品参照</a>
+				<li><a href="#" onclick="lastone()">在庫一覧</a>
+				<li><a href="#" onclick="instruction();">使用説明</a></li>
+			</ul>
+               
+		</nav>
+	</div>
+    	<script>
+	var today = new Date();
+	var ye = today.getFullYear();
+	var mo = today.getMonth() + 1;
+	var day = today.getDate();	
+	var lastday;
+	if (day==1){
+		if (mo==1 || mo==3 || mo==5 || mo==7 || mo==8 || mo==10 || mo==12) lastday=31;
+		else lastday=30;
+	}
+	else lastday = day-1;
+	$("#tanaorosi").text('棚卸（' + ye + '/'　+ mo + '/'　+ lastday + ' 23:59:59まで）');
+	</script>
+	<script src="js/jquery.multilevelpushmenu.js"></script>
+	<script type="text/javascript" src="js/covermode.js"></script>
+	<script type="text/javascript" src="js/chartist.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+<!-- 	<script type="text/javascript" src="js/bootstrap-table.js"></script> -->
+</body>
+</html>
